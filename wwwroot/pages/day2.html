@@ -1,0 +1,90 @@
+<h1>Day 2 - "Cube Conundrum"</h1>
+<div class="page">
+    <label>
+        <span>Enter input:</span>
+        <textarea id="input"></textarea>
+    </label>
+    <div class="label-set">
+        <label>
+            <span>Red cubes:</span>
+            <input id="red-count" type="number" value="12" />
+        </label>
+        <label>
+            <span>Green cubes:</span>
+            <input id="green-count" type="number" value="13" />
+        </label>
+        <label>
+            <span>Blue cubes:</span>
+            <input id="blue-count" type="number" value="14" />
+        </label>
+    </div>
+    <label>
+        <span>Result:</span>
+        <input id="output" type="number" readonly />
+    </label>
+    <label>
+        <span>Power Sum:</span>
+        <input id="power" type="number" readonly />
+    </label>
+    <label>
+        <span>Validation result:</span>
+        <table id="validation-result">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Set 1</th>
+                    <th>Set 2</th>
+                    <th>Set 3</th>
+                    <th>Set 4</th>
+                    <th>Set 5</th>
+                    <th>Set 6</th>
+                    <th>Valid?</th>
+                    <th>Minimum possible set</th>
+                    <th>Power</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </label>
+</div>
+
+<style>
+    .page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page > * + * {
+        margin-top: 0.25rem;
+    }
+
+    .page label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page label.toggle-input {
+        flex-direction: row;
+    }
+
+    .page label.toggle-input > * + * {
+        margin-left: 0.125rem;
+    }
+
+    .page .label-set {
+        display: flex;
+    }
+
+    .page .label-set > * + * {
+        margin-left: 0.5rem
+    }
+
+    #validation-result .valid {
+        background-color: #1f601f;
+    }
+
+    #validation-result .invalid {
+        background-color: #601f1f;
+    }
+</style>

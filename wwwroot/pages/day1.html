@@ -1,0 +1,39 @@
+<h1>Day 1 - "Trebuchet?!"</h1>
+<div class="page">
+    <label>
+        <span>Enter document:</span>
+        <textarea id="input"></textarea>
+    </label>
+    <label class="toggle-input">
+        <input id="include-words" type="checkbox" />
+        <span>Include words</span>
+    </label>
+    <label>
+        <span>Result:</span>
+        <input id="output" type="number" readonly />
+    </label>
+</div>
+
+<style>
+    .page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page > * + * {
+        margin-top: 0.25rem;
+    }
+
+    .page label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page label.toggle-input {
+        flex-direction: row;
+    }
+
+    .page label.toggle-input > * + * {
+        margin-left: 0.125rem;
+    }
+</style>
