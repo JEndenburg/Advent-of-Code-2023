@@ -1,0 +1,70 @@
+<h1>Day 2 - "Gear Ratios"</h1>
+<div class="page">
+    <label>
+        <span>Enter input:</span>
+        <textarea id="input"></textarea>
+    </label>
+    <label>
+        <span>Result:</span>
+        <input id="output" type="number" readonly />
+    </label>
+    <label>
+        <span>Gear ratio:</span>
+        <input id="gear-ratio" type="number" readonly />
+    </label>
+    <div id="atlas"></div>
+</div>
+
+<style>
+    .page {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page > * + * {
+        margin-top: 0.25rem;
+    }
+
+    .page label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #atlas {
+        position: relative;
+        font-family: monospace;
+        border: 1px solid #252525;
+        background-color: #303030;
+        border-radius: 2px;
+        white-space: break-spaces;
+    }
+
+    #atlas * {
+        background-color: blue;
+        border: 1px solid gray;
+    }
+
+    #atlas .area {
+        background-color: red;
+    }
+
+    #atlas .area.valid {
+        background-color: green;
+    }
+
+    #atlas .landmark {
+        background-color: orange;
+    }
+
+    #atlas-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    #atlas-overlay > * {
+        opacity: 0.25;
+    }
+</style>
